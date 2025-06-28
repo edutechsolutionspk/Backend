@@ -1,0 +1,13 @@
+@WebBackendProject_HostAddress = http://localhost:5278
+
+GET {{WebBackendProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+<system.webServer>
+    <security>
+        <requestFiltering>
+            <requestLimits maxAllowedContentLength="524288000" /> <!-- 500 MB -->
+        </requestFiltering>
+    </security>
+</system.webServer>

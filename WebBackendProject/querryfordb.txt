@@ -1,0 +1,30 @@
+Querry for databases edutechdb
+
+CREATE TABLE Classes (
+    ClassID INT AUTO_INCREMENT PRIMARY KEY,
+    ClassName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Subjects (
+    SubjectID INT AUTO_INCREMENT PRIMARY KEY ,
+    SubjectName VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE ClassSubjects (
+    ClassSubjectID INT PRIMARY KEY PRIMARY KEY ,
+    ClassID INT NOT NULL,
+    SubjectID INT NOT NULL,
+    FOREIGN KEY (ClassID) REFERENCES Classes(ClassID) ON DELETE CASCADE,
+    FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID) ON DELETE CASCADE
+);
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    father_name VARCHAR(100) NOT NULL,
+    age INT CHECK (age BETWEEN 5 AND 100), -- Ensures valid age range
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL, -- Store hashed passwords
+    class_id INT,
+    FOREIGN KEY (class_id) REFERENCES Classes(ClassID) ON DELETE SET NULL
+);
