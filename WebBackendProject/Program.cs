@@ -28,7 +28,8 @@ builder.Services.AddCors(options =>
                 "https://backend.edutechsolutionpk.com"
             )
             .AllowAnyMethod()
-            .AllowAnyHeader());
+            .AllowAnyHeader()
+               .WithExposedHeaders("Content-Disposition"));
            
 });
 
