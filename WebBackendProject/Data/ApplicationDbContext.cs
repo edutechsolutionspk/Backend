@@ -43,6 +43,8 @@ namespace WebBackendProject.Data
         public DbSet<teachervideos> Teachervideos { get; set; }
         public DbSet<videofiles> VideoFiles { get; set;}
         public DbSet<thumbnails> Thumbnails { get; set; }
+        public DbSet<PracticeFiles> practiceFiles { get; set; }
 
-     }
+        public DbSet<AssessmentFiles> assessmentFiles { get; set; }
+    }
 }

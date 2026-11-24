@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="business\practice_files\dto\" />
+    <Folder Include="business\practice_files\services\" />
     <Folder Include="wwwroot\images\studentPics\" />
     <Folder Include="wwwroot\images\subjects\" />
     <Folder Include="wwwroot\uploadedfiles\" />

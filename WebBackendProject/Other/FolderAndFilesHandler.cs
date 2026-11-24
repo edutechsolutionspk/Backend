@@ -136,7 +136,6 @@ namespace WebBackendProject.Other
 
         }
 
-
         public string CreateCategoryFolder(string category)
         {
             if (category != "Pre-Elementary" && category != "Elementary" && category != "Secondary")
@@ -153,7 +152,7 @@ namespace WebBackendProject.Other
             string categoryPath = CreateCategoryFolder(category);
             if (categoryPath == null) return null;
 
-            string? moduleFolder =module.Equals("pdf", StringComparison.OrdinalIgnoreCase) ? "pdf"
+            string? moduleFolder = module.Equals("pdf", StringComparison.OrdinalIgnoreCase) ? "pdf"
                           : module.Equals("flash", StringComparison.OrdinalIgnoreCase) ? "flash"
                           : null;
 
